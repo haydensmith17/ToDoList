@@ -1,0 +1,23 @@
+<div class="todo-background">
+    <div class="card">
+        <h2>To-Do List</h2>
+        <div class="inputline">
+            <input #todoInput type="text" placeholder="Add a new task..." />
+            <button (click)="addTodo(todoInput.value); todoInput.value = ''">Add</button>
+        </div>
+
+        <ul>
+            <li *ngFor="let todo of todos">
+                <div class="item-row">
+                    <button class="toggleButton" mat-icon-button (click)="toggleTodo(todo.id)" [ngClass]="{'checked': todo.isComplete}">
+                        <mat-checkbox [checked]="todo.isComplete" (change)="toggleTodo(todo.id)"></mat-checkbox>
+                    </button>
+                    <span [class.completed]="todo.isComplete">{{ todo.item }}</span>
+                    <button class="cancelButton" mat-icon-button (click)="deleteTodo(todo.id)">
+                        <mat-icon fontSet="material-icons-outlined">cancel</mat-icon>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

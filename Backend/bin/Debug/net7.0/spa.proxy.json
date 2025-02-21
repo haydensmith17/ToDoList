@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "",
+"LaunchCommand": "",
+"WorkingDirectory": "C:\\Users\\hayde\\python practice\\ToDoList1\\Backend",
+"MaxTimeoutInSeconds": "120"
+}
+}

@@ -1,0 +1,90 @@
+.todo-container {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.todo-background {
+  background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* Adjust the height as needed */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  margin: 40px;
+}
+
+input {
+  padding: 8px;
+  width: 400px;
+  margin-right: 8px;
+  border-radius: 10px;
+  border-width: thin;
+}
+
+.inputline {
+  margin: 10px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-width: thin;
+}
+
+button[mat-icon-button] {
+  background: none !important;
+  border: none;
+  padding: 5px;
+}
+
+.item-row {
+  background-color: whitesmoke;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.toggleButton {
+  margin-right: 5px;
+}
+
+.checked {
+  background-color: green;
+  color: rgb(82, 206, 82);
+}
+
+.cancelButton {
+  display: flex;
+  margin-left: auto;
+  color: rgb(253, 110, 110);
+}
+
+h2 {
+  margin: 10px;
+}

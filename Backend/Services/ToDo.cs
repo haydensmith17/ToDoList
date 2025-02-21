@@ -33,20 +33,12 @@ namespace Backend.Services
         public void ToggleItem(int id)
         {
             var item = _dbSource.ToDoItem.FirstOrDefault(e => e.Id == id);
-            if (item != null)
-            {
-                if (item.IsComplete == false)
-                {
-                    item.IsComplete = true;
-                    _dbSource.SaveChanges();
-                }
-                else
-                {
-                    item.IsComplete = false;
-                    _dbSource.SaveChanges();
-                }
-            }
+            if (item == null) return;
+
+            item.IsComplete = !item.IsComplete; 
+            _dbSource.SaveChanges();
         }
+
 
         public void DeleteItem(int id)
         {

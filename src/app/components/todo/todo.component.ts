@@ -40,7 +40,7 @@ export class TodoComponent implements OnInit {
   addTodo(item: string) {
     if (!item.trim()) return;
     
-    const newTodo = { item, completed: false };
+    const newTodo = { item };
 
     this.http.post<Todo>(this.addUrl, newTodo).subscribe({
       next: (todo) => this.todos.push(todo),  
